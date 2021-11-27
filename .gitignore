@@ -1,0 +1,33 @@
+/node_modules
+/public/hot
+/public/storage
+/public/css/app.css
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+# ignore mix generated files
+/public/assets
+/public/assets/*
+/public/css
+/public/css/*
+/public/js
+/public/js/*
+/public/plugins
+/public/plugins/*
+/public/mix-manifest.json
+!/public/js/custom.js
+# END of ignore mix generated files
+.DS_Store
+/resources/.DS_Store
+**/.DS_Store
+/storage/framework/laravel-excel
+/storage/framework/laravel-excel/*
