@@ -3744,33 +3744,33 @@ Version:1.0
 /*======================================
    Start Shop Newsletter CSS
 ========================================*/
-.shop-newsletter{
+.search-word-document{
 	background:#fff;
 }
-.shop-newsletter .inner{
+.search-word-document .inner{
 	text-align:center;
 }
-.shop-newsletter .inner h4 {
+.search-word-document .inner h4 {
 	color: #333;
 	font-size: 17px;
 	font-weight: 600;
 	margin-bottom: 5px;
 	text-transform: uppercase;
 }
-.shop-newsletter .inner p{
+.search-word-document .inner p{
 	color:#777;
 	font-size:14px;
 	font-weight:400;
 	margin-bottom:30px;
 }
-.shop-newsletter .inner p span{
+.search-word-document .inner p span{
 	color:#F7941D;
 }
-.shop-newsletter .newsletter-inner{
+.search-word-document .document-word-inner{
 	position:relative;
 	display: inline-block;
 }
-.shop-newsletter .newsletter-inner input {
+.search-word-document .document-word-inner input {
 	width: 480px;
 	height: 55px;
 	border-radius: 0px;
@@ -3784,13 +3784,13 @@ Version:1.0
 	border: 1px solid #ececec;
 	border-radius: 30px 0 0 30px;
 }
-.shop-newsletter .newsletter-inner button{
+.search-word-document .document-word-inner button{
 	border:none;
 	text-shadow:none;
 	box-shadow:none;
 	border-radius:0;
 }
-.shop-newsletter .newsletter-inner .btn {
+.search-word-document .document-word-inner .btn {
 	display: inline-block;
 	height: 55px;
 	padding: 10px 30px;
@@ -3804,7 +3804,7 @@ Version:1.0
 	font-weight: 500;
 	text-transform: uppercase;
 }
-.shop-newsletter .newsletter-inner .btn:hover{
+.search-word-document .document-word-inner .btn:hover{
 	background:#333;
 	color:#fff;
 }
@@ -4261,30 +4261,30 @@ Version:1.0
 	border-color:transparent;
 }
 /* Blog Newslatter CSS */
-.main-sidebar .newsletter{
+.main-sidebar .document-word{
 	
 }
-.main-sidebar .newsletter .letter-inner {
+.main-sidebar .document-word .letter-inner {
 	position:relative;
 	padding: 35px 30px;
 	box-shadow: 0px 0px 12px #00000014;
 	z-index:2;
 	overflow:hidden;
 }
-.main-sidebar .newsletter .letter-inner h4 {
+.main-sidebar .document-word .letter-inner h4 {
 	text-transform: capitalize;
 	margin-bottom: 25px;
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 24px;
 }
-.main-sidebar .newsletter .letter-inner p{
+.main-sidebar .document-word .letter-inner p{
 	margin-bottom: 20px;
 }
-.main-sidebar .newsletter .letter-inner .form-inner{
+.main-sidebar .document-word .letter-inner .form-inner{
 	position:relative;
 }
-.main-sidebar .newsletter .letter-inner input {
+.main-sidebar .document-word .letter-inner input {
 	width: 100%;
 	height: 45px;
 	background: #fff;
@@ -4295,7 +4295,7 @@ Version:1.0
 	text-shadow: none;
 	border-radius: 0;
 }
-.main-sidebar .newsletter .letter-inner .form-inner a {
+.main-sidebar .document-word .letter-inner .form-inner a {
 	height: 42px;
 	width: 100%;
 	background: #F7941D;
@@ -4308,7 +4308,7 @@ Version:1.0
 	text-transform: uppercase;
 	font-weight: 500;
 }
-.main-sidebar .newsletter .letter-inner .form-inner a:hover{
+.main-sidebar .document-word .letter-inner .form-inner a:hover{
 	background:#333;
 	color:#fff;
 }

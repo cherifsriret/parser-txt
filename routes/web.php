@@ -25,6 +25,7 @@ Route::post('user/register','FrontendController@registerSubmit')->name('register
 Route::get('/','FrontendController@home')->name('home');
 // Frontend Routes
 Route::get('/home', 'FrontendController@index');
+Route::post('/search', 'FrontendController@search')->name('search');
 
 
 // Backend section start
@@ -37,9 +38,6 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     // Profile
     Route::get('/profile','AdminController@profile')->name('admin-profile');
     Route::post('/profile/{id}','AdminController@profileUpdate')->name('profile-update');
-    // Settings
-    Route::get('settings','AdminController@settings')->name('settings');
-    Route::post('setting/update','AdminController@settingsUpdate')->name('settings.update');
     // Password Change
     Route::get('change-password', 'AdminController@changePassword')->name('change.password.form');
     Route::post('change-password', 'AdminController@changPasswordStore')->name('change.password');

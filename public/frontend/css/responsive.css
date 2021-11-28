@@ -274,7 +274,7 @@ Version:1.0
 .shop-services .single-service {
 	padding: 12px 0 12px 65px;
 }
-.shop-newsletter .newsletter-inner input {
+.search-word-document .document-word-inner input {
 	width: 380px;
 }
 .shop-blog.grid .shop-single-blog {
@@ -790,7 +790,7 @@ Version:1.0
 .shop-services.home {
 	padding: 25px 0;
 }
-.shop-newsletter .newsletter-inner input {
+.search-word-document .document-word-inner input {
 	width: 330px;
 	height: 42px;
 	padding:0 20px;
@@ -799,7 +799,7 @@ Version:1.0
 	display:block;
 	text-align:center;
 }
-.shop-newsletter .newsletter-inner .btn {
+.search-word-document .document-word-inner .btn {
 	height: 42px;
 	padding: 10px 15px;
 	width: 330px;
@@ -1393,7 +1393,7 @@ Version:1.0
 .shop-services.home {
 	padding: 25px 0;
 }
-.shop-newsletter .newsletter-inner input {
+.search-word-document .document-word-inner input {
 	width: 100%;
 	height: 42px;
 	padding: 0 12px 0 15px;
@@ -1402,7 +1402,7 @@ Version:1.0
 	display:block;
 	text-align:center;
 }
-.shop-newsletter .newsletter-inner .btn {
+.search-word-document .document-word-inner .btn {
 	height: 42px;
 	padding: 10px 15px;
 	width: 100%;

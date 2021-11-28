@@ -26,10 +26,6 @@
 	<!-- Bootstrap JS -->
 	<script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
 
-	<!-- Active JS -->
-	<script src="{{asset('frontend/js/active.js')}}"></script>
-
-
 	@stack('scripts')
 	<script>
 

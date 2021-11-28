@@ -61,6 +61,10 @@
     margin-left: 0px;
     }
 
+    body{
+        padding:25px 0;
+    }
+
     /*
 </style>
 @stack('styles')

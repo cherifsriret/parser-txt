@@ -66,6 +66,7 @@ class DocumentController extends Controller
                 array_shift($rows);
                 foreach($rows as $row => $data)
                 {
+                    $data=preg_replace("/[^A-Za-z0-9 ]/", '',$data);
                     foreach (explode(' ',$data) as $key => $word) {
                         if(strlen($word)>2 )
                         {
@@ -89,7 +90,6 @@ class DocumentController extends Controller
 
             }
         } catch (\Exception $e) {
-            dd($e->getMessage());
             request()->session()->flash('error','Error occurred while adding document');
         }
     }
