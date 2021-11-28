@@ -26,8 +26,8 @@
           <thead>
             <tr>
             <th>S.N.</th>
-              <th>Name</th>
-              <th>Excerpt</th>
+              <th>Nom fichier</th>
+              <th>Extrait</th>
               <th>Extension</th>
               <th>Occuernce</th>
             </tr>
@@ -35,8 +35,8 @@
           <tfoot>
             <tr>
                 <th>S.N.</th>
-                <th>Name</th>
-                <th>Excerpt</th>
+                <th>Nom fichier</th>
+                <th>Extrait</th>
                 <th>Extension</th>
                 <th>Occuernce</th>
               </tr>

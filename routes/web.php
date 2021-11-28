@@ -25,7 +25,7 @@ Route::post('user/register','FrontendController@registerSubmit')->name('register
 Route::get('/','FrontendController@home')->name('home');
 // Frontend Routes
 Route::get('/home', 'FrontendController@index');
-Route::post('/search', 'FrontendController@search')->name('search');
+Route::post('/indexationTEXTE', 'FrontendController@indexationTEXTE')->name('search');
 
 
 // Backend section start
@@ -34,7 +34,14 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     Route::get('/','AdminController@index')->name('admin');
     // user route
     Route::resource('users','UsersController');
-    Route::resource('documents','DocumentController');
+
+    Route::group(['prefix'=>'/documents'],function(){
+        Route::get('/','DocumentController@index')->name('documents.index');
+        Route::get('/LireCorpus','DocumentController@LireCorpusGet')->name('documents.create');
+        Route::post('/LireCorpus/store','DocumentController@LireCorpus')->name('documents.store');
+        
+    });
+    
     // Profile
     Route::get('/profile','AdminController@profile')->name('admin-profile');
     Route::post('/profile/{id}','AdminController@profileUpdate')->name('profile-update');

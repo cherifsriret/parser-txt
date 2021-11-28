@@ -18,20 +18,20 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Name</th>
-              <th>Excerpt</th>
+              <th>Nom fichier</th>
+              <th>Extrait</th>
               <th>Extension</th>
-              <th>Upload Date</th>
+              <th>Uploader</th>
               <th>Action</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
                 <th>S.N.</th>
-                <th>Name</th>
-                <th>Excerpt</th>
+                <th>Nom fichier</th>
+                <th>Extrait</th>
                 <th>Extension</th>
-                <th>Upload Date</th>
+                <th>Uploader</th>
                 <th>Action</th>
               </tr>
           </tfoot>
@@ -44,11 +44,7 @@
                     <td>{{$document->extension}}</td>
                     <td>{{(($document->created_at)? $document->created_at->diffForHumans() : '')}}</td>
                     <td>
-                    <form method="POST" action="{{route('documents.destroy',[$document->id])}}">
-                      @csrf
-                      @method('delete')
-                          <button class="btn btn-danger btn-sm dltBtn" data-id={{$document->id}} style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>
-                        </form>
+                 
                     </td>
                 </tr>
             @endforeach

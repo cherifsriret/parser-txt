@@ -18,7 +18,7 @@ class FrontendController extends Controller
         return view('frontend.index')->with('documents',null);
     }
 
-     public function search(Request $request)
+     public function indexationTEXTE(Request $request)
     {
         try {
             $niceNames = [

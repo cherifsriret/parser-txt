@@ -26,13 +26,13 @@ class DocumentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function LireCorpusGet()
     {
         return view('backend.documents.create');
     }
 
 
-    function store(Request $request)
+    function LireCorpus(Request $request)
     {
 
         try {
@@ -40,7 +40,7 @@ class DocumentController extends Controller
                 'document'=>"Document"
             ];
             $validator = Validator::make($request->all(), [
-               // 'document' => 'mimes:txt,html,htm|max:8000|required',
+                'document' => 'mimes:txt,html,htm|max:8000|required',
             ],[], $niceNames);
             if ($validator->fails()) {
                 $errors = [];
@@ -50,7 +50,8 @@ class DocumentController extends Controller
                 request()->session()->flash('error','Error occurred while adding document');
             } else {
                 $upload_file = $request->file('document');
-                $txt_file    = file_get_contents($upload_file);
+                $txt_file    = strip_tags(file_get_contents($upload_file));
+                //
                 $realExtension = $request->file('document')->getClientOriginalExtension();
                 $filename = "document-" . Carbon::now()->timestamp. "." . $realExtension;
                 $excerpt= $this->excerpt($txt_file, 20);
@@ -90,6 +91,7 @@ class DocumentController extends Controller
 
             }
         } catch (\Exception $e) {
+            dd($e->getMessage());
             request()->session()->flash('error','Error occurred while adding document');
         }
     }
