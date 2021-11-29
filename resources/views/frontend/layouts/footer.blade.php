@@ -28,8 +28,7 @@
 
 	@stack('scripts')
 	<script>
-
-		setTimeout(function(){
 		  $('.preloader').hide();
-		},2000);
+
+
 	  </script>

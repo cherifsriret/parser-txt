@@ -22,6 +22,21 @@
 </section>
 @if($documents)
 <div class="table-responsive">
+
+    <ul>
+        @foreach($documents as $document)
+
+        <li>
+            <div style="padding: 0 50px 50px 100px;">
+                <h3>{{$document->id}} - <a target="_blank" href="{{route('indexation.show',$document->id)}}">{{$document->file_name}}</a></h3>
+                <p>{{$document->excerpt}}</p>
+            </div>
+
+        </li>
+        @endforeach
+    </ul>
+{{--
+
         <table class="table table-bordered" id="user-dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
@@ -44,15 +59,19 @@
           <tbody>
             @foreach($documents as $document)
                 <tr>
-                    <td>{{$document->id}}</td>
-                    <td>{{$document->file_name}}</td>
+                    <td>{{$document->id}} </td>
+                    <td><a target="_blank" href="{{route('indexation.show',$document->id)}}">{{$document->file_name}}</a></td>
                     <td>{{$document->excerpt}}</td>
                     <td>{{$document->extension}}</td>
-                    <td>{{$document->occurence}}</td>
+                    <td>{{$document->occurence}}
+
+
+                    </td>
                 </tr>
             @endforeach
           </tbody>
         </table>
+        --}}
       </div>
 @endif
 

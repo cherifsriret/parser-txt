@@ -8,7 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
-class DocumentController extends Controller
+class LireCorpusController extends Controller
 {
       /**
      * Display a listing of the resource.
@@ -64,7 +64,6 @@ class DocumentController extends Controller
                 $document->save();
                 //parse words of document
                 $rows        = explode("\n", $txt_file);
-                array_shift($rows);
                 foreach($rows as $row => $data)
                 {
                     $data=preg_replace("/[^A-Za-z0-9 ]/", '',$data);

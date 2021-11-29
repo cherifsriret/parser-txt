@@ -15,17 +15,18 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['register'=>false]);
 
-Route::get('user/login','FrontendController@login')->name('login.form');
-Route::post('user/login','FrontendController@loginSubmit')->name('login.submit');
-Route::get('user/logout','FrontendController@logout')->name('user.logout');
+Route::get('user/login','IndexationTextController@login')->name('login.form');
+Route::post('user/login','IndexationTextController@loginSubmit')->name('login.submit');
+Route::get('user/logout','IndexationTextController@logout')->name('user.logout');
 
-Route::get('user/register','FrontendController@register')->name('register.form');
-Route::post('user/register','FrontendController@registerSubmit')->name('register.submit');
+Route::get('user/register','IndexationTextController@register')->name('register.form');
+Route::post('user/register','IndexationTextController@registerSubmit')->name('register.submit');
 // Reset password
-Route::get('/','FrontendController@home')->name('home');
+Route::get('/','IndexationTextController@home')->name('home');
 // Frontend Routes
-Route::get('/home', 'FrontendController@index');
-Route::post('/indexationTEXTE', 'FrontendController@indexationTEXTE')->name('search');
+Route::get('/home', 'IndexationTextController@index');
+Route::post('/indexationTEXTE', 'IndexationTextController@indexationTEXTE')->name('search');
+Route::get('/indexationTEXTE/{document:id}', 'IndexationTextController@indexationTEXTEShow')->name('indexation.show');
 
 
 // Backend section start
@@ -36,12 +37,13 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     Route::resource('users','UsersController');
 
     Route::group(['prefix'=>'/documents'],function(){
-        Route::get('/','DocumentController@index')->name('documents.index');
-        Route::get('/LireCorpus','DocumentController@LireCorpusGet')->name('documents.create');
-        Route::post('/LireCorpus/store','DocumentController@LireCorpus')->name('documents.store');
-        
+        Route::get('/','LireCorpusController@index')->name('documents.index');
+        Route::get('/LireCorpus','LireCorpusController@LireCorpusGet')->name('documents.create');
+        Route::post('/LireCorpus/store','LireCorpusController@LireCorpus')->name('documents.store');
+
+
     });
-    
+
     // Profile
     Route::get('/profile','AdminController@profile')->name('admin-profile');
     Route::post('/profile/{id}','AdminController@profileUpdate')->name('profile-update');
